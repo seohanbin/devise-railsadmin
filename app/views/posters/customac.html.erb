@@ -1,0 +1,9 @@
+<% @posters.each do |poster| %>
+  <ul>
+    <li><%= poster.title %> 의 아이디 : <%= poster.id %></li>
+    <li><%= poster.content %></li>
+    <li><%= link_to 'Show', poster %></li>
+    <li><%= link_to 'Edit', edit_poster_path(poster) %></li>
+    <li><%= link_to 'Destroy', poster, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+<% end %>

@@ -1,0 +1,16 @@
+<h2><%= flash[:fixar] %></h2>
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<%= form_tag (home_create_path) do %>
+  <h2>hello</h2>
+<% end %>
+
+<%= form_tag({controller: "home", action: "create", hehey: "kiki"}, class: "nifty_form") do %>
+  <h2>hello</h2>
+  <input type="submit">
+<% end %>
+
+<%= form_tag( home_create_path(hehey: "kiki") , class: "nifty_form") do %>
+  <h2>hello</h2>
+<% end %>
